@@ -1,0 +1,121 @@
+body {
+    background-color: #F5F5F7;
+}
+
+.main-container {   
+    width: 90%;
+    margin: 60px auto;
+}
+
+.sub-header {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logout-in-account {
+    color: white;
+    background-color: #029E9D;
+    border-radius: 12px;
+    font-weight: 600;
+    padding: 12px 16px;
+    border: 1px solid #029E9D;
+}
+
+#logout-in-account:hover {
+    cursor: pointer;
+    background-color: white;
+    color: #029E9D;
+}
+
+.account-container {
+    margin-top: 24px;
+}
+
+.account-container .left-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 16px;
+    border-bottom: 1.5px dashed #029E9D;
+}
+
+.left-container .info img {
+    max-width: 100px;
+    border-radius: 50%;
+}
+
+.left-container .info .name {
+    margin: 12px 0;
+}
+
+.left-container .info .role {
+    color: #ccc;
+}
+
+.left-container .select-fea {
+    margin-top: 24px;
+}
+
+.left-container .feature {
+    color: #6c6c6c;
+    font-size: 1.2em;
+    line-height: 32px;
+    font-weight: 600;
+}
+
+.left-container .feature:hover {
+    color: #029E9D;
+}
+
+.section-container .list {
+    display: flex;
+    flex-direction: column;
+}   
+
+.section-container .list .list-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    border-bottom: 1px dashed #029E9D;
+    margin: 16px 0;
+    border-radius: 4px;
+}
+
+.section-container .list .list-item:hover {
+    background-color: #E0F5F5;
+}
+
+.section-container .list .list-item .item {
+    width: 100px;
+    text-align: center;
+}
+
+#request-contact .list-item__counter {
+    flex: 1;
+}
+
+#request-contact .list-item__username,
+#request-contact .list-item__useremail {
+    flex: 2;
+}
+
+#request-contact .list-item__message {
+    flex: 4;
+}
+
+#users-list .list .list-item .item:first-child {
+    flex: 1;
+}
+
+#users-list .list .list-item .item:not(:first-child) {
+    flex: 2;
+}
+
+@media (max-width: 56.25em) {
+    .account-container {
+        flex-direction: column;
+    }
+}

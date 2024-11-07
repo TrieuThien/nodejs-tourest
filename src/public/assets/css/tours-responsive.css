@@ -1,0 +1,34 @@
+@media (max-width: 768px) {
+    .container h2 {
+        font-size: 36px;
+        /* Reduce heading size */
+    }
+
+    .info a {
+        font-size: 16px;
+        /* Smaller font size */
+    }
+
+    .sort {
+        float: none;
+        /* Đặt sort ở vị trí mặc định */
+        margin-top: 0;
+        /* Xóa khoảng cách âm trên */
+        text-align: center;
+        /* Căn giữa sort */
+    }
+
+    .card {
+        width: calc(100% - 20px);
+        /* 1 thẻ trong 1 hàng */
+        margin: 10px 0;
+        /* Giảm margin để tránh tràn */
+    }
+
+    .results {
+        margin-bottom: 10px;
+        /* Giảm khoảng cách cho các kết quả */
+    }
+}
+
+

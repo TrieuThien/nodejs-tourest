@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="/assets/images/logo-bgg.png" type="image/x-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Yeseva+One&display=swap"
+        rel="stylesheet">
+
+    {{#if isHome}}
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Roboto:wght@400;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Yeseva+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/home-responsive.css">
+    <link rel="stylesheet" href="/assets/css/about-us.css">
+    <link rel="stylesheet" href="/assets/css/about-us-responsive.css">
+    {{/if}}
+
+    {{#if isContact}}
+    <link rel="stylesheet" href="/assets/css/contact-style.css">
+    <link rel="stylesheet" href="/assets/css/contact-resposive.css">
+    {{/if}}
+
+
+    {{#if isAboutUs}}
+    <link rel="stylesheet" href="/assets/css/about-us.css">
+    <link rel="stylesheet" href="/assets/css/about-us-responsive.css">
+    {{/if}}
+
+    {{#if isBlog}}
+    <link rel="stylesheet" href="/assets/css/blog-style.css">
+    {{/if}}
+
+    {{#if isDetailsBlog}}
+    <link rel="stylesheet" href="/assets/css/details-blog-style.css">
+    {{/if}}
+
+    {{#if isLoginSignUp}}
+    <link rel="stylesheet" href="/assets/css/login-signup-style.css">
+    <link rel="stylesheet" href="/assets/css/login-signup-resonsive.css">
+    {{/if}}
+
+    {{#if isTours}}
+    <link rel="stylesheet" href="/assets/css/tours.css">
+    <link rel="stylesheet" href="/assets/css/tours-responsive.css">
+    {{/if}}
+
+    {{#if isBooking }}
+    <link rel="stylesheet" href="/assets/css/booking.css">
+    {{/if}}
+
+    {{#if isDetailsTour}}
+    <link rel="stylesheet" href="/assets/css/details-tour.css">
+    {{/if}}
+
+    {{#if isDestination}}
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Yeseva+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/detinations-style.css">
+    {{/if}}
+
+    {{#if isUserAccount}}
+    <link rel="stylesheet" href="/assets/css/user-account-style.css">
+    {{/if}}
+
+    {{#if isAdminPage}}
+    <link rel="stylesheet" href="/assets/css/admin-page-style.css">
+    {{/if}}
+    <link rel="stylesheet" href="/assets/css/index-style.css">
+    <link rel="stylesheet" href="/assets/css/index-responsive.css">
+
+    <title>Tourest</title>
+</head>
+
+<body>
+    {{> header}}
+
+    <!-- Message: Success regist products -->
+    <div id="message"></div>
+
+    {{!-- Sidebar --}}
+    <div id="sidebar" class="sidebar">
+        <ul>
+            <li><i class="fa-solid fa-user"></i><a href="/user">Account</a></li>
+            <li><i class="fa-solid fa-right-to-bracket"></i><a href="/login">Log in / Sign up</a></li>
+            <li><i class="fa-solid fa-right-from-bracket"></i><a href="/logout">Log Out</a></li>
+        </ul>
+    </div>
+
+    {{{body}}}
+
+
+    {{> footer}}
+    <script>
+        // Mobile Menu
+        var mobileMenu = document.getElementById("mobile-menu");
+        var navbar = document.querySelector("#header .navbar");
+        var listNavLink = document.querySelectorAll("#header .navbar ul li");
+
+        mobileMenu.onclick = function () {
+            var isClosed = navbar.clientHeight === 0;
+            if (isClosed) {
+                navbar.style.height = 'auto';
+                navbar.classList.add("animate-down");
+                navbar.classList.remove("animate-up");
+                setTimeout(() => {
+                    for (var i = 0; i < listNavLink.length; i++) {
+                        listNavLink[i].style.display = "block";
+                        listNavLink[i].style.opacity = "1";
+                    }
+                }, 200);
+            } else {
+                navbar.classList.add("animate-up");
+                navbar.classList.remove("animate-down");
+                setTimeout(() => {
+                    for (var i = 0; i < listNavLink.length; i++) {
+                        listNavLink[i].style.display = "none";
+                        listNavLink[i].style.opacity = "0";
+                    }
+                }, 200);
+                navbar.style.height = "0px";
+            }
+        };
+
+        function checkBrowserSize() {
+            var width = window.innerWidth;
+            var listItems = document.querySelectorAll("#header .navbar ul li");
+            var navbar = document.querySelector("#header .navbar");
+            if (width > 1048) {
+                for (var i = 0; i < listNavLink.length; i++) {
+                    listItems[i].style.display = "inline-block";
+                    listItems[i].style.opacity = "1";
+                }
+                navbar.style.height = "auto";
+            } else {
+                for (var i = 0; i < listNavLink.length; i++) {
+                    listItems[i].style.display = "none";
+                }
+                navbar.style.height = "0px";
+            }
+        }
+
+        window.addEventListener("resize", checkBrowserSize);
+        window.addEventListener("load", checkBrowserSize);
+
+        // Sidebar
+        document.getElementById('header-action__account').addEventListener('click', function () {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('show'); // Thay đổi trạng thái hiển thị của sidebar
+        });
+    </script>
+    <script src="/assets/js/common-script.js"></script>
+</body>
+
+</html>

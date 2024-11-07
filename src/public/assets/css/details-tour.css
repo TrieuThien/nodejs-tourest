@@ -1,0 +1,264 @@
+.img {
+    width: 100%;
+    height: auto;
+}
+
+
+.tours-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 1;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.info a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.info .a-aboutus {
+    opacity: 0.8;
+}
+
+.info p {
+    margin: 0 10px;
+    color: white;
+}
+
+
+.details-tours .main-container {
+    width: 90%;
+    margin: 32px auto;
+}
+
+.main-container .tour-list-details {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.main-container .tour-list-details img {
+    width: 100%;
+    height: auto;
+
+}
+
+.main-container .tour-list-details .tour-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  
+    background-color: #D6EEED; 
+    padding: 16px;
+}
+
+.tour-body .tour-content .tour-place {
+    font-size: 20px;
+    color:#a09d9d;
+}
+.tour-body  .h-border {
+    border: 1px solid #029E9D;
+}
+
+.tour-body .tour-tags {
+    color: #FDC703;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.tour-body .tour-tag-btn {
+    background-color: #029E9D;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+.tour-body .tour-tag-btn .tour-price {
+    color: white;
+    font-weight: 500;
+    font-size: 28px;
+}
+
+.bottom-container {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.bottom-container .left-container {
+    flex: 2;
+} 
+
+.bottom-container .right-container {
+    flex: 1;
+}
+
+/* Common */
+.left-container .faq-hedar {
+    color: #666666;
+}
+
+
+.left-container .tours-overview .tour-title{
+    line-height: 32px;
+}
+
+.left-container .blog-single-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.left-container .blog-single-list ul li {
+    list-style-type: none;
+    line-height: 52px;
+}
+
+.left-container .blog-single-list ul li i {
+    padding: 12px;
+    border-radius: 50%;
+    color: white;
+    background-color: #029E9D;
+    margin-right: 16px;
+}
+
+.left-container .tour-plan-items .plan-item {
+    display: flex;
+    flex-direction: row;
+    line-height: 32px;
+}
+
+.tour-plan-items .plan-item .plan-title {
+    flex: 1;
+}
+
+.tour-plan-items .plan-item .plan-content {
+    flex: 5;
+}
+
+
+.left-container .contact-map iframe { 
+    width: 100%;
+    min-height: 300px;
+}
+
+#accordionExample .accordion-item {
+    color: #666666;
+    padding: 20px;
+    border: 2px solid #029E9D;
+    border-radius: 10px;
+    margin-bottom: 24px;
+}
+
+.blog-reply-wrapper .blog-reply-item{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.contact-form-wrapper .form-rating {
+    margin: 20px 0;
+}
+
+
+.form-rating .tour-rating {
+    color: #ccc;
+}
+.form-rating .active {
+    color: #FDC703;
+}
+
+.contact-form-wrapper .contact-form {
+    width: 100%;
+    background-color: #D6EEED;
+    border-radius: 15px;
+    margin-bottom: 24px;
+}
+
+.contact-form-wrapper .contact-form form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form-wrapper .contact-form input, 
+.contact-form-wrapper .contact-form textarea {
+    min-width: 80%;
+    padding: 16px;
+    margin: 16px 0;
+    border: none;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #029E9D;
+    color: white;
+    padding: 16px;
+    border: 1px solid #029E9D;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+button:hover {
+    color: #029E9D;
+    background-color: white;
+    border: 1px solid #029E9D;
+    cursor: pointer;
+}
+
+.right-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1em;
+}
+
+
+.right-container .booking-bg {
+    width: 100%;
+    padding: 16px;
+    border-radius: 12px ;
+    background-color: #D6EEED;
+}
+
+.right-container .booking-bg .tour-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 16px 0;
+}
+
+.right-container .booking-bg .tour-input p {
+    line-height: 32px;
+}
+
+.right-container .booking-bg .tour-input .form-control {
+    padding: 16px;
+    border: none;
+    width: 50%;
+    border-radius: 4px;
+}  
+
+.booking-bg .form-check .form-check-label {
+    line-height: 32px;
+}
+
+@media (max-width: 62.5em) {
+    .bottom-container {
+        flex-direction: column;
+    }
+}

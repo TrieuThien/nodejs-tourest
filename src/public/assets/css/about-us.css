@@ -1,0 +1,404 @@
+ * {
+     box-sizing: border-box;
+ }
+
+ :root {
+     --primary-color: #029E9D;
+ }
+
+
+ /* Clients */
+ .Clients {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     align-items: center;
+     padding: 50px;
+ }
+
+ .Clients .content {
+     flex: 1;
+ }
+
+ .Clients h2 {
+     color: #f5a623;
+     font-size: 24px;
+     margin: 0;
+ }
+
+ .Clients h1 {
+     color: #333333;
+     font-size: 48px;
+     margin: 10px 0;
+ }
+
+ .Clients p {
+     color: #666666;
+     font-size: 16px;
+     line-height: 1.5;
+ }
+
+ .features {
+     margin-top: 30px;
+ }
+
+ .feature {
+     display: flex;
+     align-items: center;
+     margin-bottom: 20px;
+ }
+
+ .feature i {
+     font-size: 24px;
+     color: #00bfa5;
+     margin-right: 15px;
+ }
+
+ .feature h3 {
+     color: #333333;
+     font-size: 20px;
+     margin: 0;
+ }
+
+ .feature p {
+     color: #666666;
+     font-size: 16px;
+     margin: 5px 0 0 0;
+ }
+
+ .button {
+     margin-top: 30px;
+ }
+
+ .button a {
+     background-color: #00bfa5;
+     color: #ffffff;
+     padding: 15px 30px;
+     text-decoration: none;
+     border-radius: 5px;
+     font-size: 16px;
+ }
+
+ .Clients .image {
+     display: flex;
+     align-items: center;
+     flex: 1;
+ }
+
+ .Clients .image img {
+    width: 100%;
+    height: auto;
+ }
+
+ @media (max-width: 768px) {
+     .content h1 {
+         font-size: 36px;
+     }
+
+     .content p,
+     .feature p {
+         font-size: 14px;
+     }
+
+     .feature h3 {
+         font-size: 18px;
+     }
+
+     .button a {
+         padding: 10px 20px;
+         font-size: 14px;
+     }
+
+     .image img {
+         width: 150px;
+         height: 150px;
+     }
+ }
+
+ @media (max-width: 480px) {
+     .Clients {
+         flex-direction: column;
+         padding: 20px;
+     }
+
+     .content,
+     .images {
+         max-width: 100%;
+         flex: 1 1 100%;
+     }
+
+     .content h1 {
+         font-size: 28px;
+     }
+
+     .content p,
+     .feature p {
+         font-size: 12px;
+     }
+
+     .feature h3 {
+         font-size: 16px;
+     }
+
+     .button a {
+         padding: 8px 16px;
+         font-size: 12px;
+     }
+
+     .image img {
+         width: 100%;
+         height: 100%;
+     }
+ }
+
+
+
+
+ /* ss2 */
+ .ss2 {
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     padding: 50px;
+     background: #f5f5f5;
+ }
+
+.text-content {
+    max-width: 400px;
+}
+
+ .text-content h1 {
+     font-family: 'Playfair Display', serif;
+     font-size: 48px;
+     margin: 20px 0;
+ }
+
+ .text-content h2 {
+     font-family: 'Playfair Display', serif;
+     font-size: 24px;
+     color: #f5a623;
+ }
+
+ .text-content p {
+     font-size: 16px;
+     color: #777;
+     line-height: 1.6;
+ }
+
+ .play-button {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 60px;
+     height: 60px;
+     background: #00bfa5;
+     border-radius: 50%;
+     color: #fff;
+     font-size: 24px;
+     margin: 20px 0;
+ }
+
+ .stats {
+     display: flex;
+     justify-content: space-between;
+ }
+
+ .stat {
+     text-align: center;
+ }
+
+ .stat h3 {
+     font-size: 24px;
+     color: #00bfa5;
+     margin: 10px 0;
+ }
+
+ .stat p {
+     font-size: 14px;
+     color: #777;
+ }
+
+ .image-content img {
+     width: 100%;
+     max-width: 500px;
+     height: auto;
+     border-radius: 10px;
+ }
+
+ /* ss3 */
+
+ .ss3 {
+     text-align: center;
+     padding: 50px 0;
+ }
+
+ .ss3 h1 {
+     font-size: 36px;
+     color: #333;
+     margin-bottom: 10px;
+ }
+
+ .ss3 h2 {
+     font-size: 24px;
+     color: #ffcc00;
+     margin-bottom: 50px;
+ }
+
+ .team {
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+     gap: 20px;
+ }
+
+ .team-member {
+     background-color: #fff;
+     border-radius: 10px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     overflow: hidden;
+     width: 350px;
+ }
+
+
+ .team-member img {
+     width: 100%;
+     height: auto;
+ }
+
+ .team-member .info {
+     padding: 20px;
+ }
+
+ .team-member .info h3 {
+     font-size: 20px;
+     color: #333;
+     margin: 0;
+ }
+
+ .team-member .info p {
+     font-size: 16px;
+     color: #777;
+     margin: 5px 0 20px;
+ }
+
+ .team-member .info .social {
+     display: flex;
+     justify-content: center;
+     gap: 10px;
+ }
+
+ .team-member .info .social a {
+     color: #777;
+     font-size: 18px;
+     text-decoration: none;
+ }
+
+
+ /* footer */
+ .footer {
+     background-color: #1a2238;
+     padding: 40px 0;
+     color: #ffffff;
+ }
+
+ .footer .item {
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-start;
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 0 20px;
+ }
+
+ .footer h3 {
+     font-size: 18px;
+     margin-bottom: 20px;
+ }
+
+ .footer ul {
+     list-style: none;
+     padding: 0;
+ }
+
+ .footer ul li {
+     margin-bottom: 10px;
+ }
+
+ .footer ul li a {
+     color: #b0b0b0;
+     text-decoration: none;
+ }
+
+ .footer ul li a:hover {
+     text-decoration: underline;
+ }
+
+ .footer .newsletter {
+     max-width: 300px;
+ }
+
+ .footer .newsletter p {
+     margin-bottom: 20px;
+ }
+
+ .footer .newsletter input[type="email"] {
+     width: calc(100% - 110px);
+     padding: 10px;
+     border: none;
+     border-radius: 5px 0 0 5px;
+     outline: none;
+ }
+
+ .footer .newsletter button {
+     padding: 10px 20px;
+     border: none;
+     background-color: #00bfa5;
+     color: #ffffff;
+     border-radius: 0 5px 5px 0;
+     cursor: pointer;
+ }
+
+ .footer .newsletter button:hover {
+     background-color: #009688;
+ }
+
+ .footer .social-icons {
+     display: flex;
+     margin-top: 20px;
+ }
+
+ .footer .social-icons a {
+     color: #b0b0b0;
+     margin-right: 10px;
+     font-size: 20px;
+     text-decoration: none;
+ }
+
+ .footer .social-icons a:hover {
+     color: #ffffff;
+ }
+
+
+
+ .footer .logo {
+     display: flex;
+     align-items: center;
+     margin-top: 20px;
+ }
+
+ .footer .logo img {
+     width: 40px;
+     margin-right: 10px;
+ }
+
+ .footer .logo span {
+     font-size: 18px;
+     font-weight: bold;
+ }
+
+ .footer .copyright {
+     margin-top: 20px;
+     font-size: 14px;
+     color: #b0b0b0;
+ }

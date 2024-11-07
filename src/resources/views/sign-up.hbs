@@ -1,0 +1,121 @@
+<div id="form-container" style="background-image: url('/assets/images/page-background.jpg');">
+    <form id="signup-form" method="POST" action="/user-signup" onsubmit="return checkBeforeSignUp()"
+        class="formDangKyDangNhap">
+        <h1>Sign Up</h1>
+        <div class="input-label">
+            <label for="username">Username</label> <br>
+            <input id="username" class="input-field" name="username" type="text"
+                placeholder="Type your username"></input><br>
+        </div>
+
+        <div class="input-label">
+            <label for="username">Full name</label> <br>
+            <input id="fullname" class="input-field" name="fullname" type="text"
+                placeholder="Type your full name"></input><br>
+        </div>
+
+        <div class="input-label">
+            <label for="dateOfBirth">Date of Birth</label> <br>
+            <input id="dateOfBirth" class="input-field" name="dateOfBirth" type="date"
+                placeholder="Type your date of birth"></input><br>
+        </div>
+
+        <div class="input-label">
+            <label for="userphone">Phone number</label> <br>
+             <input id="userphone" class="input-field" name="phone" type="text"
+            placeholder="Nhập số điện thoại của bạn"></input>
+        </div>
+
+        <div class="input-label">
+            <label for="email">Email</label> <br>
+            <input id="email" class="input-field" name="email" type="email"
+                placeholder="Type your password"></input><br>
+        </div>
+
+        <div class="input-label">
+            <label for="password">Password</label> <br>
+            <input id="password" class="input-field" name="password" type="password"
+                placeholder="Type your password"></input><br>
+        </div>
+
+        <div class="input-label">
+            <label for="confirm-password">Confirm your password</label> <br>
+            <input id="confirm-password" class="input-field" name="confirm-password" type="password"
+                placeholder="Type your password"></input><br>
+        </div>
+
+        <div class="submit-container">
+            <input id="submit-button" type="submit" value="Sign Up">
+        </div>
+
+        <div class="orther-sign-up">
+            <p class="text-decor">Or sign up using</p>
+
+            <div class="social-icon">
+                <a style="background-color: #0866ff;" href="https://web.facebook.com/"><i
+                        class="fa-brands fa-facebook-f"></i></a>
+                <a style="background-color: #2EA8EF;" href="https://trieuthien.github.io/"><i
+                        class="fa-brands fa-twitter"></i></a>
+                <a style="background-color: #EE4134;" href="https://www.google.com/"><i
+                        class="fa-brands fa-google-plus-g"></i></a>
+            </div>
+        </div>
+
+        <div class="web-sign-up">
+            <a href="/login">Sign in</a>
+        </div>
+    </form>
+</div>
+
+<script>
+    function checkBeforeSignUp() {
+        var userNameSignUpElm = document.getElementById('username')
+        var userNameSignUp = userNameSignUpElm.value
+
+        var fullNameSignUpElm = document.getElementById('fullname')
+        var fullNameSignUp = fullNameSignUpElm.value
+
+        var birthSignUpElm = document.getElementById('dateOfBirth')
+        var birthSignUp = birthSignUpElm.value
+
+        var userPhoneElement = document.getElementById("userphone");
+        var userPhone = userPhoneElement.value; 
+
+        var emailSignUpElm = document.getElementById('email')
+        var emailSignUp = emailSignUpElm.value
+
+        var passwordSignUpElm = document.getElementById('password')
+        var passwordSignUp = passwordSignUpElm.value
+
+        var confirmPasswordElm = document.getElementById('confirm-password')
+        var confirmPassword = confirmPasswordElm.value
+
+        var phonePattern = /^[0-9]{10}$/;
+
+        if (!isEmptyForm("signup-form")) {
+            if (userNameSignUp == "")
+                showErrorToast("Error", "Please type your username.");
+            else if (fullNameSignUp == "")
+                showErrorToast("Error", "Please type your full name.");
+            else if (!birthSignUp)
+                showErrorToast("Error", "Please type your date of birth.");
+            else if (!phonePattern.test(userPhone))
+                showErrorToast("Error","Please type the correct phone number format.");
+            else if (emailSignUp == "")
+                showErrorToast("Error", "Please type your email");
+            else if (passwordSignUp == "")
+                showErrorToast("Error", "Please type your password")
+            else if (!emailSignUpElm.validity.valid)
+                showErrorToast("Error", "Please type the correct email format.");
+            else if (confirmPassword != passwordSignUp)
+                showErrorToast("Error", "The confirmation password does not match.");
+            else
+                return true;
+        }
+        else {
+            showWarningToast("Please type your information!");
+        }
+        return false
+    }
+
+</script>

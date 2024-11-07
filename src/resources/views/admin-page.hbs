@@ -1,0 +1,86 @@
+<div class="main-container">
+    <section class="sub-header">
+        <div class="brand">
+            <h1>Tourest</h1>
+        </div>
+
+        <button id="logout-in-account" onclick="logout()">Log out</button>
+    </section>
+
+    <section class="account-container">
+        <div class="left-container">
+            <div class="info">
+                <img src="/images/profile-picture.png" alt="account picture">
+                <h2 class="name">{{ admin.fullname }}</h2>
+                <p class="role">{{ admin.role }}</p>
+            </div>
+            <div class="select-fea">
+                <h2>Feature</h2>
+                <div>
+                    <a href="#request-contact" class="feature">Request Contact List</a>
+                </div>
+                <div>
+                    <a href="#users-list" class="feature">Users List</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-container">
+            <div id="request-contact" class="section-container">
+                <h1 class="title">Request Contact</h1>
+                <p class="title-explain">Shows all request contact from user.</p>
+                <div class="list">
+                    <div class="list-item">
+                        <p class="item list-item__counter">Serial</p>
+                        <p class="item list-item__username">Full name</p>
+                        <p class="item list-item__useremail">User email</p>
+                        <p class="item list-item__message">Message</p>
+                    </div>
+
+                    {{#each allRequestContact}}
+                        <div class="list-item">
+                            <p class="item list-item__counter">{{ counter @index }}</p>
+                            <p class="item list-item__username">{{ this.user_fullname }}</p>
+                            <p class="item list-item__useremail">{{ this.user_email }}</p>
+                            <p class="item list-item__message">{{ this.user_message }}</p>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+
+            <div id="users-list" class="section-container">
+                <h1 class="title">Users List</h1>
+                <p class="title-explain">Shows all user account.</p>
+                <div class="list">
+                    <div class="list-item">
+                        <p class="item list-item__counter">Serial</p>
+                        <p class="item list-item__username">User name</p>
+                        <p class="item list-item__fullname">Full name</p>
+                        <p class="item list-item__birth">Date of Birth</p>
+                        <p class="item list-item__userphone">Phone</p>
+                        <p class="item list-item__useremail">Email</p>
+                        <p class="item list-item__userpassword">Password</p>
+                    </div>
+
+                    {{#each allUsers}}
+                        <div class="list-item">
+                            <p class="item list-item__counter">{{ counter @index}}</p>
+                            <p class="item list-item__username">{{ this.username }}</p>
+                            <p class="item list-item__fullname">{{ this.fullname }}</p>
+                            <p class="item list-item__birth">{{ this.dateOfBirth }}</p>
+                            <p class="item list-item__userphone">{{ this.phone }}</p>
+                            <p class="item list-item__useremail">{{ this.email }}</p>
+                            <p class="item list-item__userpassword">{{ this.password }}</p>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+    function logout() {
+        window.location.href = '/logout'; 
+    }
+</script>

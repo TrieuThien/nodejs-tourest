@@ -1,0 +1,36 @@
+@media (max-width: 1200px) {
+    .text-content,
+    .image-content {
+        max-width: 100%;
+        /* Full width on smaller screens */
+    }
+
+    .team {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1000px) {
+    .ss2,
+    .Clients {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .clients .content h1 {
+        font-size: 36px;
+        /* Reduce heading size */
+    }
+
+    .button {
+        padding: 10px 20px;
+    }
+
+    .info a {
+        font-size: 16px;
+        /* Smaller font size */
+    }
+}

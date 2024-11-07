@@ -1,0 +1,91 @@
+<div class="main-container">
+    <section class="sub-header">
+        <div class="brand">
+            <h1>Tourest</h1>
+        </div>
+
+        <button id="logout-in-account" onclick="logout()">Log out</button>
+    </section>
+
+    <section class="account-container">
+        <div class="left-container">
+            <div class="info">
+                <img src="/images/profile-picture.png" alt="account picture">
+                <h2 class="name">{{ UserHandled.fullname }}</h2>
+                <p class="email">{{ UserHandled.email }}</p>
+            </div>
+            <div class="select-fea">
+                <div>
+                    <a href="#personal-info" class="feature">Personal Infomation</a>
+                </div>
+                <div>
+                    <a href="#booking-history" class="feature">Booking History</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-container">
+            <div id="personnal-info">
+                <h1 class="title">Personal Infomation</h1>
+                <p class="title-explain">Manage your personal infomation, include name, date of birth and email address
+                    where you can be contacted.</p>
+                <div class="list-item">
+                    <div class="item">
+                        <h3 class="item__title">Name<span><i class="fa-solid fa-circle-user"></i></span></h3>
+                        <p class="item__content">{{ UserHandled.fullname }}</p>
+                    </div>
+
+                    <div class="item">
+                        <h3 class="item__title">Date of Birth<span><i class="fa-solid fa-cake-candles"></i></span></h3>
+                        <p class="item__content">{{ UserHandled.dateOfBirth }}</p>
+                    </div>
+
+                    <div class="item">
+                        <h3 class="item__title">Phone number<span><i class="fa-solid fa-phone"></i></span></h3>
+                        <p class="item__content">{{ UserHandled.phone }}</p>
+                    </div>
+
+                    <div class="item">
+                        <h3 class="item__title">Email<span><i class="fa-solid fa-envelope"></i></span></h3>
+                        <p class="item__content">{{ UserHandled.email }}</p>
+                    </div>
+
+                    <div class="item">
+                        <h3 class="item__title">Username<span><i class="fa-regular fa-circle-user"></i></span></h3>
+                        <p class="item__content">{{ UserHandled.username }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="booking-history">
+                <h1 class="title">Booking history</h1>
+                <p class="title-explain">Shows all the tours you have booked.</p>
+                <div class="list-booking">
+                    <div class="item-booking">
+                        <p class="item item-booking__counter">Serial</p>
+                        <p class="item item-booking__country">Country</p>
+                        <p class="item item-booking__day">Day</p>
+                        <p class="item item-booking__time">Time</p>
+                        <p class="item item-booking__guests">Guests</p>
+                    </div>
+
+                    {{#each allBookingHadle}}
+                        <div class="item-booking">
+                            <p class="item item-booking__counter">{{ counter @index }}</p>
+                            <p class="item item-booking__country">{{ this.country }}</p>
+                            <p class="item item-booking__day">{{ this.date }}</p>
+                            <p class="item item-booking__time">{{ this.time }}</p>
+                            <p class="item item-booking__guests">{{ this.guests }}</p>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+    function logout() {
+        window.location.href = '/logout'; 
+    }
+</script>

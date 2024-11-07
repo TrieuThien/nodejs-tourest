@@ -1,0 +1,133 @@
+a {
+    text-decoration: none;
+}
+
+.img {
+    width: 100%;
+    height: auto;
+}
+
+.tours-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 1;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.info a {
+    color: white;
+    font-size: 18px;
+}
+
+.info .a-aboutus {
+    opacity: 0.8;
+}
+
+.info p {
+    margin: 0 10px;
+    color: white;
+}
+
+
+/* ss1 */
+.ss1 {
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    overflow: hidden;
+    width: calc(30% - 20px);
+    /* 3 thẻ trong 1 hàng */
+    display: inline-block;
+    vertical-align: top;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.card .badge {
+    position: absolute;
+    background: #ffc107;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    top: 10px;
+    left: 10px;
+    font-size: 14px;
+}
+
+.card .content {
+    padding: 15px;
+}
+
+.card .price {
+    background: #17a2b8;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.card .rating {
+    color: #ffc107;
+    margin-bottom: 10px;
+}
+
+.card .description {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+.card .location {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    color: #007bff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 1px solid #dee2e6;
+    margin: 0 2px;
+    border-radius: 4px;
+}
+
+.pagination a.active {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+}

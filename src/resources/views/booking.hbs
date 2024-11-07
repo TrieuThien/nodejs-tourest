@@ -1,0 +1,89 @@
+<!-- Banner -->
+<section class="banner">
+    <img class="img" src="/assets/images/banner.png" alt="">
+    <div class="banner-container">
+        <h1>Booking</h1>
+        <div class="info">
+            <a href="">Home</a>
+            <p>/</p>
+            <a class="a-banner" href="">Booking</a>
+        </div>
+    </div>
+</section>
+    
+<div class="booking-form">
+    <h2>Book This Tour</h2>
+    <form action="/booking/regist" method="POST" onsubmit="return validateInput()">
+        <input type="text" name="fullname" placeholder="Enter your name" required>
+        <input type="email" name="email" placeholder="Enter email address" required>
+        <div class="row">
+            <select required name="country">
+                <option value="" disabled selected>Country</option>
+                <option value="US">United States</option>
+                <option value="UK">United Kingdom</option>
+                <option value="CA">Canada</option>
+                <option value="VN">Vietnam</option>
+                <!-- Add more options as needed -->
+            </select>
+            <input type="date" name="date" required>
+        </div>
+        <div class="row">
+            <select name="time" required>
+                <option value="" disabled selected>Choose time</option>
+                <option value="Morning">Morning</option>
+                <option value="Afternoon">Afternoon</option>
+                <option value="Evening">Evening</option>
+            </select>
+            <input type="number" id="guests" name="guests" placeholder="Guests" required min="1">
+        </div>
+        <div class="prices">
+            <p>Adult: $50</p>
+            <p>Youth: $55</p>
+            <p>Children: $30</p>
+        </div>
+
+        <button type="submit">Book Now</button>
+    </form>
+</div>
+
+<div class="faq-section">
+    <h2>Frequently Asked Question</h2>
+    <div class="faq">
+        <div>
+            <h3>How to book the new tour for 2 persons?</h3>
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+        </div>
+        <p>You can book the tour for 2 persons directly on our website.</p>
+    </div>
+    <div class="faq">
+        <div>
+            <h3>Why are your tours so expensive?</h3>
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+        </div>
+        <p>We provide premium services including experienced guides and exclusive locations.</p>
+    </div>
+    <div class="faq">
+        <div>
+            <h3>Which payment methods are acceptable?</h3>
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+        </div>
+        <p>We accept credit cards, PayPal, and bank transfers.</p>
+    </div>
+</div>
+<script>
+    const faqs = document.querySelectorAll('.faq div');
+    faqs.forEach(faq => {
+        faq.addEventListener('click', () => {
+            faq.parentNode.classList.toggle('active');
+        });
+    });
+
+    function validateInput() {
+        const guests = document.getElementById('guests').value;
+        if (guests < 1) {
+            showErrorToast("Error", "Please enter a positive number of guests.");
+            return false; // Ngăn không cho gửi form
+        }
+        return true; // Cho phép gửi form
+    }
+</script>

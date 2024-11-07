@@ -1,0 +1,136 @@
+body {
+    background-color: #F5F5F7;
+}
+
+.main-container {
+    width: 80%;
+    margin: 60px auto;
+}
+
+.sub-header {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logout-in-account {
+    color: white;
+    background-color: #029E9D;
+    border-radius: 12px;
+    font-weight: 600;
+    padding: 12px 16px;
+    border: 1px solid #029E9D;
+}
+
+#logout-in-account:hover {
+    cursor: pointer;
+    background-color: white;
+    color: #029E9D;
+}
+
+.account-container {
+    display: flex;
+    margin-top: 24px;
+}
+
+.account-container .left-container {
+    flex: 1;
+}
+
+.account-container .right-container {
+    flex: 2;
+}
+
+.left-container .info img {
+    max-width: 100px;
+    border-radius: 50%;
+}
+
+.left-container .info .name {
+    margin: 12px 0;
+}
+
+.left-container .info .email {
+    color: #ccc;
+}
+
+.left-container .select-fea {
+    margin-top: 24px;
+}
+
+.left-container .feature {
+    color: #6c6c6c;
+    font-size: 1.2em;
+    line-height: 32px;
+    font-weight: 600;
+}
+
+.left-container .feature:hover {
+    color: #029E9D;
+}
+
+.right-container .list-item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.right-container .list-item .item {
+    width: calc(50% - 48px);
+    background-color: white;
+    border-radius: 12px;
+    padding: 12px;
+    margin: 12px;
+}
+
+.right-container .list-item .item i {
+    float: right;
+    font-size: 28px;
+    color: #029E9D;
+}
+
+.right-container .list-item .item__content {
+    color: #6c6c6c;
+}
+
+#booking-history .list-booking {
+    display: flex;
+    flex-direction: column;
+}   
+
+#booking-history .list-booking .item-booking {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    border-bottom: 1px dashed #029E9D;
+    margin: 16px 0;
+    border-radius: 4px;
+}
+
+#booking-history .list-booking .item-booking:hover {
+    background-color: #E0F5F5;
+}
+
+#booking-history .list-booking .item-booking .item {
+    width: 100px;
+    text-align: center;
+}
+
+@media (max-width: 56.25em) {
+    .account-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 34.375em) {
+    .right-container .list-item {
+        flex-direction: column;
+    }
+    
+    .right-container .list-item .item {
+        width: 80%;
+        justify-content: center;
+    }
+}

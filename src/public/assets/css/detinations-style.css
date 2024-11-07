@@ -1,0 +1,108 @@
+/* Common CSS */
+.section-spacing {
+    margin: 60px;
+}
+
+  
+.destination-item {
+    position: relative; 
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.destination-item img {
+    width: 100%;
+}
+
+.image-transition img {
+    transition: transform 0.3s;
+}
+
+.image-transition:hover img {
+    transform: scale(1.1); 
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3); 
+}
+
+.info-overlay {
+    position: absolute; 
+    top: 80%; 
+    left: 5%; 
+    right: 0; 
+    bottom: 10%; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-overlay h4{
+    font-size: 1.7em;
+    margin: 0;
+    font-family: "Comforter Brush", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #FDC703;
+}
+
+.info-overlay h3 {
+    font-size: 2em;
+    margin: 0;
+    color: white;
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.destination {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.destination .top-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.destination .top-container .destination-item {
+    max-width: 40%;
+}
+
+.destination .bottom-container {
+    display: flex;
+    flex-direction: row;   
+    flex-wrap: wrap;
+}
+
+.destination .bottom-container .destination-item {
+    flex: 0 0 calc(33.33% - 10px);
+    margin: 5px; 
+}
+
+.destination .bottom-container .destination-item .info-overlay {
+    align-self: center;
+}
+
+@media (max-width: 62.5em) {
+    .destination .top-container{
+        flex-direction: column;
+    }
+
+    .destination .top-container .destination-item {
+        max-width: 100%;
+        margin-bottom: 8px;
+    }    
+
+    .destination .bottom-container{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,86 @@
+<!-- Banner -->
+<section class="banner">
+    <img class="img" src="/assets/images/banner.png" alt="">
+    <div class="banner-container">
+        <h1>Contact</h1>
+        <div class="info">
+            <a href="">Home</a>
+            <p>/</p>
+            <a class="a-banner" href="">Contact</a>
+        </div>
+    </div>
+</section>
+
+<div class="contact-info">
+    <div class="contact-info__email contact-container1">
+        <div class="contact-container1__left">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <p>Email Address:</p>
+        </div>
+        <div class="separator"></div>
+        <a href="mailto:info@tourest.com">info@tourest.com</a>
+    </div>
+    <div class="contact-info__phone contact-container1">
+        <div class="contact-container1__left">
+            <i class="fa fa-phone-square" aria-hidden="true"></i>
+            <p>Number:</p>
+        </div>
+        <div class="separator"></div>
+        <a href="tel:+84123456789">0123 456 789</a>
+    </div>
+</div>
+<div class="contact-container">
+    <img src="/assets/images/contact-image.png" alt="Contact me!">
+    <div id="contact-form">
+        <form id="form" method="POST" action="/contact-us/send" onsubmit="return checkSendMessage()">
+            <input id="user_name" class="get-text" name="user_fullname" type="text" placeholder="Enter your name"></input>
+            <input id="user_email" class="get-text" name="user_email" type="email"
+                placeholder="Enter your email"></input>
+            <textarea id="user_message" class="get-text textarea-field" name="user_message" type="text"
+                placeholder="Type your keyword"></textarea>
+            <input id="send-message-button" class="submit-button" type="submit" value="Send Message">
+        </form>
+    </div>
+</div>
+
+<div class="map-container">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.333140728594!2d106.64130847480386!3d10.7087671894359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752e1cec67a961%3A0x3818d5b2ea4007ea!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBWxINuIEhp4bq_bg!5e0!3m2!1svi!2s!4v1730624285081!5m2!1svi!2s"
+        allowfullscreen="" loading="lazy">
+    </iframe>
+</div>
+
+<script>
+    function checkSendMessage() {
+        var userNameElement = document.getElementById("user_name");
+        var userName = userNameElement.value;
+        // console.log(userName);
+
+        var userEmailElement = document.getElementById("user_email");
+        var userEmail = userEmailElement.value;
+        // console.log(userEmail);
+
+        var userMessageElement = document.getElementById("user_message");
+        var userMessage = userMessageElement.value;
+        // console.log(userMessage);
+
+        
+        if (userName == "")
+            showErrorToast("Error","Please type your name.");
+
+        else if (userEmail == "")
+            showErrorToast("Error", "Please type your email.");
+
+        else if (!userEmailElement.validity.valid)
+            showErrorToast("Error","Please type the correct email format.");
+
+        else if (userMessage == "")
+            showErrorToast("Error","Please type the content you want to send to us.");
+
+        else {
+            return true;
+        }
+
+        return false;
+    }
+</script>

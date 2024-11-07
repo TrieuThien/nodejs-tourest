@@ -1,0 +1,22 @@
+@media (max-width: 1028px) {
+    .contact-info {
+        flex-direction: column;
+    }
+
+    .contact-info .contact-container1 {
+        align-self: center;
+        margin-top: 24px;
+    }
+
+    .contact-info .contact-container1 a {
+        font-size: 15px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+    .contact-container img {
+        max-width: fit-content;
+        align-self: center;
+    }
+}

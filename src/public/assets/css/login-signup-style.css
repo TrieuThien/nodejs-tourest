@@ -1,0 +1,126 @@
+#form-container {
+    /* background: url('./assets/images/page-background.jpg') no-repeat fixed 100% 100%; */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.text-decor {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.formDangKyDangNhap {
+    background-color: aliceblue;
+    padding: 24px 48px;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    border-radius: 10px;
+}
+
+.formDangKyDangNhap h1 {
+    text-align: center;
+}
+
+.formDangKyDangNhap .input-label {
+    margin-top: 20px;
+}
+
+.formDangKyDangNhap .input-label label {
+    font-size: 16px;
+}
+
+.formDangKyDangNhap .input-label .input-field {
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 5px;
+    margin-top: 4px;
+    min-width: 350px;
+}
+
+.formDangKyDangNhap .forgot-password {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.formDangKyDangNhap .forgot-password a {
+    text-decoration: none;
+    color: black;
+}
+
+.formDangKyDangNhap .forgot-password a:hover {
+   cursor: pointer;
+   color:blue;
+}
+
+.submit-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#submit-button {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: rgb(153, 204, 255, 0.7);
+    font-size: 16px;
+}
+
+#submit-button:hover {
+    cursor: pointer;
+    background-color: rgb(153, 204, 255);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);   
+    color: white;
+}
+
+.formDangKyDangNhap .orther-sign-up {   
+    margin-top: 40px;
+}
+
+.formDangKyDangNhap .orther-sign-up .social-icon {
+    display: flex;
+    justify-content: space-evenly;
+}
+.formDangKyDangNhap .orther-sign-up .social-icon a {
+    text-decoration: none;
+    width: 32px;    
+    height: 32px;
+    font-size: 28px;
+    text-align: center;
+    padding: 8px;
+    color: white;
+    border-radius: 50%;
+}
+
+
+.formDangKyDangNhap .web-sign-up {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formDangKyDangNhap .web-sign-up a {
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.formDangKyDangNhap .web-sign-up a:hover {
+    color: red;
+}
+
+

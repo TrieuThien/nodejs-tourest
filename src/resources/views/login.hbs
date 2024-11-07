@@ -1,0 +1,64 @@
+<div id="form-container" style="background-image: url('/assets/images/page-background.jpg');">
+    <form id="login-form" method="POST" action="/user-login" onsubmit="return checkBeforeLogin()"
+        class="formDangKyDangNhap">
+        <h1>Login</h1>
+        <div class="input-label">
+            <label for="username">Username</label> <br>
+            <input id="username" class="input-field" name="username" type="text"
+                placeholder="Type your username"></input><br>
+        </div>
+
+        <div class="input-label">
+            <label for="password">Password</label> <br>
+            <input id="password" class="input-field" name="password" type="password"
+                placeholder="Type your password"></input><br>
+        </div>
+
+        <div class="forgot-password">
+            <a href="#">Forgot password?</a> <br>
+        </div>
+
+        <div class="submit-container">
+            <input id="submit-button" type="submit" value="Login">
+        </div>
+
+        <div class="orther-sign-up">
+            <p class="text-decor">Or sign up using</p>
+
+            <div class="social-icon">
+                <a style="background-color: #0866ff;" href="https://web.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                <a style="background-color: #2EA8EF;" href="https://x.com/"><i class="fa-brands fa-twitter"></i></a>
+                <a style="background-color: #EE4134;" href="https://www.google.com/"><i class="fa-brands fa-google-plus-g"></i></a>
+            </div>
+        </div>
+
+        <div class="web-sign-up">
+            <p class="text-decor">Or sign up using</p>
+            <a href="/sign-up">Sign up</a>
+        </div>
+
+    </form>
+</div>
+
+<script>
+    function checkBeforeLogin() {
+        var userNameLoginpElm = document.getElementById('username')
+        var userNameLogin = userNameLoginpElm.value
+
+        var passwordLoginElm = document.getElementById('password')
+        var passwordLogin = passwordLoginElm.value
+
+        if (!isEmptyForm("login-form")) {
+            if (userNameLogin == "")
+                showErrorToast("Lỗi", "Vui lòng nhập tên đăng nhập");
+            else if (passwordLogin == "")
+                showErrorToast("Lỗi", "Vui lòng nhập mật khẩu");
+            else
+                return true;
+        }
+        else {
+            showWarningToast("Vui lòng nhập thông tin bạn nhé!");
+        }
+        return false
+    }
+</script>
