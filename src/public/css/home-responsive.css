@@ -1,0 +1,21 @@
+@media (max-width: 48em) {
+  .slider {
+    padding: 60px 0; }
+  .slides .slide {
+    flex-direction: column; }
+  .slide .left-slider-container {
+    margin-bottom: 32px; }
+  .large-card,
+  .small-card {
+    width: 100%; }
+  .section2-container {
+    gap: 10px; }
+  .articles-container {
+    flex-direction: column; }
+  .article {
+    width: 70%;
+    align-self: center; }
+  .testimonial-container {
+    flex-direction: column; }
+  .testimonial-content {
+    width: 100%; } }
