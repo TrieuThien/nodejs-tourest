@@ -2,7 +2,7 @@
     background-color: #e0f5f5;
     padding: 20px;
     border-radius: 8px;
-    width: 90%;
+    width: 85%;
     margin: 20px auto;
     text-align: left;
 }
@@ -17,6 +17,14 @@
     flex-direction: column;
 }
 
+.booking-form form .input-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-form form .input-field label {
+    padding: 4px 12px;
+}
 .booking-form input[type="text"],
 .booking-form input[type="email"],
 .booking-form input[type="date"],
@@ -30,11 +38,11 @@
 
 .booking-form .row {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
-.booking-form .row select,
-.booking-form .row input {
+.booking-form .row .input-field{
     flex: 1;
 }
 

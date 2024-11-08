@@ -14,27 +14,45 @@
 <div class="booking-form">
     <h2>Book This Tour</h2>
     <form action="/booking/regist" method="POST" onsubmit="return validateInput()">
-        <input type="text" name="fullname" placeholder="Enter your name" required>
-        <input type="email" name="email" placeholder="Enter email address" required>
-        <div class="row">
-            <select required name="country">
-                <option value="" disabled selected>Country</option>
-                <option value="US">United States</option>
-                <option value="UK">United Kingdom</option>
-                <option value="CA">Canada</option>
-                <option value="VN">Vietnam</option>
-                <!-- Add more options as needed -->
-            </select>
-            <input type="date" name="date" required>
+        <div class="input-field">
+            <label for="fullname">Full name</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your name" required>
+        </div>
+        <div class="input-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter email address" required>
         </div>
         <div class="row">
-            <select name="time" required>
-                <option value="" disabled selected>Choose time</option>
-                <option value="Morning">Morning</option>
-                <option value="Afternoon">Afternoon</option>
-                <option value="Evening">Evening</option>
-            </select>
-            <input type="number" id="guests" name="guests" placeholder="Guests" required min="1">
+            <div class="input-field">
+                <label for="country">Country</label>
+                <select required id="country" name="country">
+                    <option value="" disabled selected>Country</option>
+                    <option value="US">United States</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="CA">Canada</option>
+                    <option value="VN">Vietnam</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+            <div class="input-field">
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" placeholder="mm/dd/yyyy" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field">
+                <label for="time">Time</label>
+                <select id="time" name="time" required>
+                    <option value="" disabled selected>Choose time</option>
+                    <option value="Morning">Morning</option>
+                    <option value="Afternoon">Afternoon</option>
+                    <option value="Evening">Evening</option>
+                </select>
+            </div>
+            <div class="input-field">
+                <label for="guests">Guests</label>
+                <input type="number" id="guests" name="guests" placeholder="Guests" required min="1">
+            </div>
         </div>
         <div class="prices">
             <p>Adult: $50</p>

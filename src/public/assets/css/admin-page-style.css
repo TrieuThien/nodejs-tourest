@@ -2,8 +2,12 @@ body {
     background-color: #F5F5F7;
 }
 
+#header {
+    position: relative !important;
+}
+
 .main-container {   
-    width: 90%;
+    width: 1400px;
     margin: 60px auto;
 }
 
